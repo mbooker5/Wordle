@@ -68,6 +68,7 @@ class MainActivity : AppCompatActivity() {
             guessNumber = 1
             wordToGuess = getRandomFourLetterWord()
             word.text = ""
+            button.text = "GUESS"
         }
 
         button.setOnClickListener{
