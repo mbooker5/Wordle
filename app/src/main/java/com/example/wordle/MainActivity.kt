@@ -48,13 +48,13 @@ class MainActivity : AppCompatActivity() {
         val inputText = findViewById<android.widget.EditText>(R.id.guessWordEditText)
 
         var guessNumber = 1
-        var g1Text = findViewById<android.widget.TextView>(R.id.g1)
-        var g1CheckText = findViewById<android.widget.TextView>(R.id.g1check)
-        var g2Text = findViewById<android.widget.TextView>(R.id.g2)
-        var g2CheckText = findViewById<android.widget.TextView>(R.id.g2check)
-        var g3Text = findViewById<android.widget.TextView>(R.id.g3)
-        var g3CheckText = findViewById<android.widget.TextView>(R.id.g3check)
-        var word = findViewById<android.widget.TextView>(R.id.wordReveal)
+        val g1Text = findViewById<android.widget.TextView>(R.id.g1)
+        val g1CheckText = findViewById<android.widget.TextView>(R.id.g1check)
+        val g2Text = findViewById<android.widget.TextView>(R.id.g2)
+        val g2CheckText = findViewById<android.widget.TextView>(R.id.g2check)
+        val g3Text = findViewById<android.widget.TextView>(R.id.g3)
+        val g3CheckText = findViewById<android.widget.TextView>(R.id.g3check)
+        val word = findViewById<android.widget.TextView>(R.id.wordReveal)
 
 
         fun resetGame() : Unit {
@@ -66,7 +66,8 @@ class MainActivity : AppCompatActivity() {
             g3Text.text = ""
             g3CheckText.text = ""
             guessNumber = 1
-            var wordToGuess = getRandomFourLetterWord()
+            wordToGuess = getRandomFourLetterWord()
+            word.text = ""
         }
 
         button.setOnClickListener{
